@@ -2,26 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+input {
+  @apply text-black
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.timer-input {
+  @apply w-[100px];
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.rc-time-picker input,
+.rc-time-picker-panel-input,
+.rc-time-picker-panel-select li {
+  @apply text-base;
+}
+
+.btn {
+  @apply font-semibold rounded relative inline-flex items-center justify-center px-3.5 py-2 m-1 border-b-4 border-l-2 active:shadow-none shadow-lg bg-gradient-to-tr text-white
 }
